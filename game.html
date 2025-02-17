@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>🎲 Dice Game 🎲</h1>
+    <img src="dice-shield.png" alt="Dice shield image" height="100" width="100"/>
+    <!-- Setup Section -->
+    <div id="setupArea">
+        <h3>Enter Player Names</h3>
+        <div>
+            <label>Player 1: </label>
+            <input type="text" id="player1Name" placeholder="Enter name for Player 1" required>
+        </div>
+        <div>
+            <label>Player 2: </label>
+            <input type="text" id="player2Name" placeholder="Enter name for Player 2" required>
+        </div>
+        <div>
+            <label>Player 3: </label>
+            <input type="text" id="player3Name" placeholder="Enter name for Player 3" required>
+        </div>
+        <button id="startGame">Start Game</button>
+    </div>
+
+    <!-- Game Area -->
+    <div id="gameArea" style="display: none;">
+        <h2>Current Turn: <span id="currentPlayer">Player 1</span></h2>
+
+        <!-- Dice Display -->
+        <div class="dice-wrapper">
+            <div class="dice-container" id="dice1Container">
+                <img id="dice1Image" src="1.png" alt="Dice 1">
+                <p id="dice1Name">Player 1</p>
+            </div>
+            <div class="dice-container" id="dice2Container">
+                <img id="dice2Image" src="1.png" alt="Dice 2">
+                <p id="dice2Name">Player 2</p>
+            </div>
+            <div class="dice-container" id="dice3Container">
+                <img id="dice3Image" src="1.png" alt="Dice 3">
+                <p id="dice3Name">Player 3</p>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button id="rollDice">Roll Dice</button>
+        <p id="winner" style="color: green; font-size: 24px; font-weight: bold;"></p>
+
+        <!-- Scores -->
+        <h3>Scores:</h3>
+        <ul id="scoreBoard"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
