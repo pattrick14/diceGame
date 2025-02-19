@@ -1,4 +1,3 @@
-// Game variables
 let scores = [0, 0, 0];
 let currentPlayer = 0;
 let playerNames = ["Player 1", "Player 2", "Player 3"];
@@ -13,8 +12,7 @@ function startGame() {
     const name1 = document.getElementById('player1Name').value.trim();
     const name2 = document.getElementById('player2Name').value.trim();
     const name3 = document.getElementById('player3Name').value.trim();
-
-    // Validate player names
+s
     if (!name1 || !name2 || !name3) {
         alert('Please enter names for all three players!');
         return;
@@ -53,7 +51,7 @@ function rollDice() {
     renderScores();
 
     // Check if the current player won
-    if (scores[currentPlayer] >= 10) {
+    if (scores[currentPlayer] >= 50) {
         document.getElementById('winner').innerText = `🎉 ${playerNames[currentPlayer]} wins with ${scores[currentPlayer]} points! 🎉`;
         document.getElementById('rollDice').disabled = true; // Disable rolling after win
         return;
